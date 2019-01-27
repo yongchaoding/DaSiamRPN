@@ -1,8 +1,6 @@
-# --------------------------------------------------------
-# DaSiamRPN
-# Licensed under The MIT License
-# Written by Qiang Wang (wangqiang2015 at ia.ac.cn)
-# --------------------------------------------------------
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import cv2
 import torch
 import numpy as np

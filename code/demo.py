@@ -1,9 +1,5 @@
-# --------------------------------------------------------
-# DaSiamRPN
-# Licensed under The MIT License
-# Written by Qiang Wang (wangqiang2015 at ia.ac.cn)
-# --------------------------------------------------------
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import glob, cv2, torch
 import numpy as np
@@ -20,10 +16,11 @@ net.load_state_dict(torch.load(join(realpath(dirname(__file__)), 'SiamRPNVOT.mod
 net.eval().cuda()
 
 # image and init box
-image_files = sorted(glob.glob('./MOT16-13/*.jpg'))
-#image_files = sorted(glob.glob('./bag/*.jpg'))
+#image_files = sorted(glob.glob('./MOT16-13/*.jpg'))
+image_files = sorted(glob.glob('./bag/*.jpg'))
 init_rbox = [334.02,128.36,438.19,188.78,396.39,260.83,292.23,200.41]
 [cx, cy, w, h] = get_axis_aligned_bbox(init_rbox)
+
 ## MOT16-05 第一帧
 #w = 69
 #h = 190
@@ -38,10 +35,10 @@ init_rbox = [334.02,128.36,438.19,188.78,396.39,260.83,292.23,200.41]
 ##
 
 ## MOT16-13 第一帧
-w = 52
-h = 109
-cx = 1521 + w/2
-cy = 568 + h/2
+#w = 52
+#h = 109
+#cx = 1521 + w/2
+#cy = 568 + h/2
 ##
 
 
